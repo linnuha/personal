@@ -15,22 +15,22 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
-                method: 'POST',
-                body: JSON.stringify(data),
-                headers: { 'Content-Type': 'application/json' }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.result === "success") {
-                    alert('Login berhasil! Selamat datang ' + data.namaLengkap);
-                    window.location.href = "dashboard.html";
-                } else {
-                    alert(data.message);
-                }
-            })
-            .catch((error) => alert('Error: ' + error));  // Pastikan catch tertutup dengan benar
-        });
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: { 'Content-Type': 'application/json' }
+})
+.then(response => response.json())
+.then(data => {
+    if (data.result === "success") {
+        alert('Login berhasil! Selamat datang ' + data.namaLengkap);
+        window.location.href = "dashboard.html";
+    } else {
+        alert(data.message);
     }
+})
+.catch((error) => alert('Error: ' + error));
+        });
+    }   
 
     document.addEventListener('DOMContentLoaded', function() {
     var wargaForm = document.getElementById("wargaForm");
@@ -168,4 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+// Menambahkan header CORS untuk membolehkan permintaan dari domain lain
+// (Bagian ini hanya untuk Google Apps Script, jangan letakkan di file JavaScript client-side)
 
