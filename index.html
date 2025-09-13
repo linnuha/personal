@@ -3,63 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desaku - Aplikasi Desa</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Desaku - Aplikasi CRUD Desa</title>
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+    <style>
+        /* Reset margin dan padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling untuk body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        header button {
+            background-color: #fff;
+            color: #4CAF50;
+            border: 2px solid #4CAF50;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        header button:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Form Styling */
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Data Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Map Section Styling */
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Hide sections */
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
+
     <!-- Header -->
     <header>
-        <h1>Desaku</h1>
-        <p>Aplikasi Pengelolaan Data Desa</p>
-        <button id="loginBtn">Login</button>
+        <h1>Desaku - Aplikasi CRUD Desa</h1>
     </header>
 
-    <!-- Login Section -->
-    <section id="loginSection" class="hidden">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit">Login</button>
-        </form>
-    </section>
-
-    <!-- Data Input Section -->
-    <section id="dataInputSection">
+    <!-- Create / Add Data Section -->
+    <section>
         <h2>Tambah Data Desa</h2>
-        <form id="desaForm">
-            <label for="desaName">Nama Desa:</label>
-            <input type="text" id="desaName" name="desaName" required>
+        <form id="createForm">
+            <label for="name">Nama Desa:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="location">Lokasi Desa:</label>
+            <input type="text" id="location" name="location" required>
 
-            <label for="desaLocation">Lokasi Desa:</label>
-            <input type="text" id="desaLocation" name="desaLocation" required>
+            <label for="population">Jumlah Penduduk:</label>
+            <input type="number" id="population" name="population" required>
 
-            <label for="desaPopulation">Jumlah Penduduk:</label>
-            <input type="number" id="desaPopulation" name="desaPopulation" required>
+            <label for="description">Deskripsi Desa:</label>
+            <textarea id="description" name="description" required></textarea>
 
-            <label for="desaDescription">Deskripsi Desa:</label>
-            <textarea id="desaDescription" name="desaDescription" required></textarea>
-
-            <label for="desaCoordinates">Lokasi di Peta (Longitude, Latitude):</label>
-            <input type="text" id="desaCoordinates" name="desaCoordinates" placeholder="e.g., 106.8650, -6.1750" required>
+            <label for="coordinates">Koordinat:</label>
+            <input type="text" id="coordinates" name="coordinates" required>
 
             <button type="submit">Simpan Data</button>
         </form>
     </section>
 
-    <!-- Map Section -->
-    <section id="mapSection">
-        <h2>Peta Lokasi Desa</h2>
-        <div id="map" style="height: 400px; width: 100%;"></div>
-    </section>
-
-    <!-- Data Table Section -->
-    <section id="dataTableSection">
+    <!-- Read Data Section -->
+    <section>
         <h2>Data Desa</h2>
         <table id="desaTable">
             <thead>
@@ -68,20 +162,125 @@
                     <th>Lokasi</th>
                     <th>Jumlah Penduduk</th>
                     <th>Deskripsi</th>
-                    <th>Lokasi di Peta</th>
+                    <th>Koordinat</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Data akan ditambahkan di sini -->
+                <!-- Data akan ditampilkan di sini -->
             </tbody>
         </table>
     </section>
 
+    <!-- Map Section -->
+    <section id="mapSection">
+        <h2>Peta Lokasi Desa</h2>
+        <div id="map" style="height: 400px; width: 100%;"></div>
+    </section>
+
     <!-- Footer -->
     <footer>
-        <p>© 2025 Desaku. Semua Hak Dilindungi.</p>
+        <p>&copy; 2025 Layanan Desa Terpadu</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Google Maps
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: { lat: -6.1750, lng: 106.8650 }, // Jakarta sebagai default
+            });
+
+            // Menambahkan marker
+            document.getElementById('desaForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                var coords = document.getElementById('desaCoordinates').value.split(',');
+                var lat = parseFloat(coords[0].trim());
+                var lng = parseFloat(coords[1].trim());
+
+                var marker = new google.maps.Marker({
+                    position: { lat: lat, lng: lng },
+                    map: map,
+                });
+
+                map.setCenter({ lat: lat, lng: lng });
+            });
+        }
+
+        // Menangani pengiriman form untuk Create
+        document.getElementById('createForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            let name = document.getElementById('name').value;
+            let location = document.getElementById('location').value;
+            let population = document.getElementById('population').value;
+            let description = document.getElementById('description').value;
+            let coordinates = document.getElementById('coordinates').value;
+
+            let newData = { name, location, population, description, coordinates };
+
+            sendData('create', newData)
+                .then(response => {
+                    alert(response.message);
+                    loadData();  // Memuat ulang data setelah penambahan
+                });
+        });
+
+        // Fungsi untuk mengirim data ke Google Apps Script
+        function sendData(action, data = {}) {
+            return fetch('https://script.google.com/macros/s/AKfycbxNrDmRV74YtOOYJkrVqolTkzEznD63JtOg6E65oKYsgaXAsRldnYK_3py0GnzV41uJ/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ action: action, ...data })
+            })
+            .then(response => response.json())
+            .then(data => data)
+            .catch(error => console.error('Error:', error));
+        }
+
+        // Menampilkan data di tabel
+        function loadData() {
+            sendData('read')
+                .then(response => {
+                    const tableBody = document.getElementById('desaTable').getElementsByTagName('tbody')[0];
+                    tableBody.innerHTML = '';  // Bersihkan tabel sebelum diisi
+                    response.data.forEach((item, index) => {
+                        const row = tableBody.insertRow();
+                        row.insertCell(0).textContent = item.name;
+                        row.insertCell(1).textContent = item.location;
+                        row.insertCell(2).textContent = item.population;
+                        row.insertCell(3).textContent = item.description;
+                        row.insertCell(4).textContent = item.coordinates;
+
+                        // Aksi Update dan Delete
+                        let actionCell = row.insertCell(5);
+                        let updateBtn = document.createElement('button');
+                        updateBtn.textContent = 'Update';
+                        updateBtn.onclick = () => updateData(item.id);
+                        actionCell.appendChild(updateBtn);
+
+                        let deleteBtn = document.createElement('button');
+                        deleteBtn.textContent = 'Delete';
+                        deleteBtn.onclick = () => deleteData(item.id);
+                        actionCell.appendChild(deleteBtn);
+                    });
+                });
+        }
+
+        // Menghapus data
+        function deleteData(id) {
+            sendData('delete', { id })
+                .then(response => {
+                    alert(response.message);
+                    loadData();  // Memuat ulang data setelah penghapusan
+                });
+        }
+
+        // Memuat data saat halaman dimuat
+        window.onload = loadData;
+    </script>
+
 </body>
 </html>
