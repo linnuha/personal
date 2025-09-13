@@ -9,7 +9,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         password: password
     };
 
-    fetch('https://script.google.com/macros/s/AKfycbwQpOUsFt-X-IxPWXO2WpTvTjGRFjI0r2rGwIiJMlmnpO2M8CWaMaqf_WVV7_5EX9OP/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
+    fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
@@ -55,7 +55,7 @@ document.getElementById("wargaForm").addEventListener("submit", function(event) 
         rt: rt
     };
 
-    fetch('https://script.google.com/macros/s/AKfycbwQpOUsFt-X-IxPWXO2WpTvTjGRFjI0r2rGwIiJMlmnpO2M8CWaMaqf_WVV7_5EX9OP/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
+    fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
@@ -91,7 +91,7 @@ document.getElementById("pengaduanForm").addEventListener("submit", function(eve
         isiPengaduan: isiPengaduan
     };
 
-    fetch('https://script.google.com/macros/s/AKfycbwQpOUsFt-X-IxPWXO2WpTvTjGRFjI0r2rGwIiJMlmnpO2M8CWaMaqf_WVV7_5EX9OP/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
+    fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
@@ -125,7 +125,7 @@ document.getElementById("kontakForm").addEventListener("submit", function(event)
         pesan: pesan
     };
 
-    fetch('https://script.google.com/macros/s/AKfycbwQpOUsFt-X-IxPWXO2WpTvTjGRFjI0r2rGwIiJMlmnpO2M8CWaMaqf_WVV7_5EX9OP/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
+    fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
@@ -157,7 +157,7 @@ document.getElementById("fasilitasForm").addEventListener("submit", function(eve
         gambar: gambar
     };
 
-    fetch('https://script.google.com/macros/s/AKfycbwQpOUsFt-X-IxPWXO2WpTvTjGRFjI0r2rGwIiJMlmnpO2M8CWaMaqf_WVV7_5EX9OP/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
+    fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
@@ -191,7 +191,7 @@ document.getElementById("dokumenForm").addEventListener("submit", function(event
         ketuaRT: ketuaRT
     };
 
-    fetch('https://script.google.com/macros/s/AKfycbwQpOUsFt-X-IxPWXO2WpTvTjGRFjI0r2rGwIiJMlmnpO2M8CWaMaqf_WVV7_5EX9OP/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
+    fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
@@ -233,7 +233,7 @@ document.getElementById("arsipForm").addEventListener("submit", function(event) 
         fileArsip: fileArsip
     };
 
-    fetch('https://script.google.com/macros/s/AKfycbwQpOUsFt-X-IxPWXO2WpTvTjGRFjI0r2rGwIiJMlmnpO2M8CWaMaqf_WVV7_5EX9OP/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
+    fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
@@ -277,7 +277,7 @@ document.getElementById("domisiliForm").addEventListener("submit", function(even
         alamatDomisili: alamatDomisili
     };
 
-    fetch('https://script.google.com/macros/s/AKfycbwQpOUsFt-X-IxPWXO2WpTvTjGRFjI0r2rGwIiJMlmnpO2M8CWaMaqf_WVV7_5EX9OP/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
+    fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
@@ -321,7 +321,7 @@ document.getElementById("sktmForm").addEventListener("submit", function(event) {
         keperluan: keperluan
     };
 
-    fetch('https://script.google.com/macros/s/AKfycbwQpOUsFt-X-IxPWXO2WpTvTjGRFjI0r2rGwIiJMlmnpO2M8CWaMaqf_WVV7_5EX9OP/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
+    fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
