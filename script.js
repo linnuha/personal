@@ -32,12 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Formulir Warga
+    document.addEventListener('DOMContentLoaded', function() {
     var wargaForm = document.getElementById("wargaForm");
     if (wargaForm) {
         wargaForm.addEventListener("submit", function(event) {
             event.preventDefault();
 
+            // Ambil data dari form
             var id = document.getElementById("id").value;
             var nama = document.getElementById("nama").value;
             var nik = document.getElementById("nik").value;
@@ -49,6 +50,12 @@ document.addEventListener('DOMContentLoaded', function() {
             var statusKawin = document.getElementById("statusKawin").value;
             var alamat = document.getElementById("alamat").value;
             var rt = document.getElementById("rt").value;
+
+            // Validasi form sebelum kirim data
+            if (!id || !nama || !nik || !jenisKelamin || !tempatLahir || !tanggalLahir || !agama || !pekerjaan || !statusKawin || !alamat || !rt) {
+                alert("Semua data harus diisi!");
+                return; // Jika ada yang kosong, hentikan proses
+            }
 
             var data = {
                 id: id,
@@ -64,12 +71,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 rt: rt
             };
 
-            fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {
+            // Mengirimkan data ke Google Apps Script
+            fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
             })
-            .then(response => response.json())
+            .then(response => response.json())  // Mengonversi respons menjadi JSON
             .then(data => {
                 if (data.result === "success") {
                     alert('Data warga berhasil disimpan!');
@@ -78,9 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     alert('Terjadi kesalahan: ' + data.message);
                 }
             })
-            .catch((error) => alert('Error: ' + error));  // Pastikan catch tertutup dengan benar
+            .catch((error) => alert('Error: ' + error));  // Menangani error
         });
     }
+});
 
     // Formulir Pengaduan
     var pengaduanForm = document.getElementById("pengaduanForm");
@@ -159,3 +168,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
