@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 password: password
             };
 
-            fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
+            fetch('hhttps://script.google.com/macros/s/AKfycbwIuuWuJo_Zp4JJayfsSy5wXjTYLNj-pzwJnx_NXUNeHDU37fYMV6zgK-k_fUd9oWnu/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
     method: 'POST',
     body: JSON.stringify(data),
     headers: { 'Content-Type': 'application/json' }
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             // Mengirimkan data ke Google Apps Script
-            fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
+            fetch('hhttps://script.google.com/macros/s/AKfycbwIuuWuJo_Zp4JJayfsSy5wXjTYLNj-pzwJnx_NXUNeHDU37fYMV6zgK-k_fUd9oWnu/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 isiPengaduan: isiPengaduan
             };
 
-            fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {
+            fetch('hhttps://script.google.com/macros/s/AKfycbwIuuWuJo_Zp4JJayfsSy5wXjTYLNj-pzwJnx_NXUNeHDU37fYMV6zgK-k_fUd9oWnu/exec', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 pesan: pesan
             };
 
-            fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {
+            fetch('hhttps://script.google.com/macros/s/AKfycbwIuuWuJo_Zp4JJayfsSy5wXjTYLNj-pzwJnx_NXUNeHDU37fYMV6zgK-k_fUd9oWnu/exec', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
