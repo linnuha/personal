@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelayanan Desa - Warga</title>
+    <title>Pelayanan Desa - Dashboard</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -18,71 +17,92 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login.html">Logout</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Warga</a>
+                    <a class="nav-link" href="warga.html">Warga</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pengaduan.html">Pengaduan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="kontak.html">Kontak</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fasilitas.html">Fasilitas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dokumen.html">Dokumen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="arsip.html">Arsip</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="domisili.html">Domisili</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sktm.html">SKTM</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Formulir Warga -->
+    <!-- Main Content -->
     <div class="container mt-5">
-        <h2 class="text-center">Formulir Pengisian Data Warga</h2>
-        <form id="wargaForm">
-            <div class="form-group">
-                <label for="id">ID</label>
-                <input type="text" class="form-control" id="id" required>
+        <h2 class="text-center">Dashboard Admin Pelayanan Desa</h2>
+        <p class="lead text-center">Pilih menu untuk mengelola data desa.</p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Warga</h3>
+                <p>Kelola data warga desa.</p>
+                <a href="warga.html" class="btn btn-primary">Kelola Warga</a>
             </div>
-            <div class="form-group">
-                <label for="nama">Nama Lengkap</label>
-                <input type="text" class="form-control" id="nama" required>
+            <div class="col-md-4">
+                <h3>Pengaduan</h3>
+                <p>Kelola pengaduan dari warga desa.</p>
+                <a href="pengaduan.html" class="btn btn-primary">Kelola Pengaduan</a>
             </div>
-            <div class="form-group">
-                <label for="nik">NIK</label>
-                <input type="text" class="form-control" id="nik" required>
+            <div class="col-md-4">
+                <h3>Kontak</h3>
+                <p>Kelola informasi kontak.</p>
+                <a href="kontak.html" class="btn btn-primary">Kelola Kontak</a>
             </div>
-            <div class="form-group">
-                <label for="jenisKelamin">Jenis Kelamin</label>
-                <select class="form-control" id="jenisKelamin" required>
-                    <option value="Laki-laki">Laki-laki</option>
-                    <option value="Perempuan">Perempuan</option>
-                </select>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <h3>Fasilitas</h3>
+                <p>Kelola data fasilitas desa.</p>
+                <a href="fasilitas.html" class="btn btn-primary">Kelola Fasilitas</a>
             </div>
-            <div class="form-group">
-                <label for="tempatLahir">Tempat Lahir</label>
-                <input type="text" class="form-control" id="tempatLahir" required>
+            <div class="col-md-4">
+                <h3>Dokumen</h3>
+                <p>Kelola dokumen yang ada di desa.</p>
+                <a href="dokumen.html" class="btn btn-primary">Kelola Dokumen</a>
             </div>
-            <div class="form-group">
-                <label for="tanggalLahir">Tanggal Lahir</label>
-                <input type="date" class="form-control" id="tanggalLahir" required>
+            <div class="col-md-4">
+                <h3>Arsip</h3>
+                <p>Kelola arsip surat-surat desa.</p>
+                <a href="arsip.html" class="btn btn-primary">Kelola Arsip</a>
             </div>
-            <div class="form-group">
-                <label for="agama">Agama</label>
-                <input type="text" class="form-control" id="agama" required>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <h3>Domisili</h3>
+                <p>Kelola data surat domisili warga.</p>
+                <a href="domisili.html" class="btn btn-primary">Kelola Domisili</a>
             </div>
-            <div class="form-group">
-                <label for="pekerjaan">Pekerjaan</label>
-                <input type="text" class="form-control" id="pekerjaan" required>
+            <div class="col-md-4">
+                <h3>SKTM</h3>
+                <p>Kelola pengajuan SKTM untuk warga desa.</p>
+                <a href="sktm.html" class="btn btn-primary">Kelola SKTM</a>
             </div>
-            <div class="form-group">
-                <label for="statusKawin">Status Kawin</label>
-                <input type="text" class="form-control" id="statusKawin" required>
-            </div>
-            <div class="form-group">
-                <label for="alamat">Alamat</label>
-                <textarea class="form-control" id="alamat" rows="3" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="rt">RT</label>
-                <input type="text" class="form-control" id="rt" required>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Simpan Data</button>
-        </form>
+        </div>
     </div>
 
     <footer class="bg-dark text-white text-center py-3">
@@ -92,6 +112,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.5/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
