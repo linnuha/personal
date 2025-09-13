@@ -1,5 +1,8 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+var loginForm = document.getElementById("loginForm");
+if (loginForm) {
+    loginForm.addEventListener("submit", function(event) {
+        event.preventDefault();
 
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
@@ -22,10 +25,13 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         } else {
             alert(data.message);
         }
-    })
-    .catch((error) => alert('Error: ' + error));
+    });
 });
 
+var wargaForm = document.getElementById("wargaForm");
+if (wargaForm) {
+    wargaForm.addEventListener("submit", function(event) {
+        event.preventDefault();
 document.getElementById("wargaForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -70,7 +76,15 @@ document.getElementById("wargaForm").addEventListener("submit", function(event) 
         }
     })
     .catch((error) => alert('Error: ' + error));
-});
+    });
+}
+
+var pengaduanForm = document.getElementById("pengaduanForm");
+if (pengaduanForm) {
+    pengaduanForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+    });
+}
 
 document.getElementById("pengaduanForm").addEventListener("submit", function(event) {
     event.preventDefault();
@@ -96,14 +110,20 @@ document.getElementById("pengaduanForm").addEventListener("submit", function(eve
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
     })
-    .then(response => response.json())
-    .then(data => {
-        if (data.result === "success") {
-            alert('Pengaduan berhasil dikirim!');
-            document.getElementById("pengaduanForm").reset();  // Reset form setelah berhasil
-        } else {
-            alert('Terjadi kesalahan: ' + data.message);
-        }
+.then(response => response.json())
+.then(data => {
+    if (data.result === "success") {
+        alert('Pengaduan berhasil dikirim!');
+    } else {
+        alert('Terjadi kesalahan: ' + data.message);
+    }
+})
+.catch((error) => alert('Error: ' + error));
+
+var kontakForm = document.getElementById("kontakForm");
+if (kontakForm) {
+    kontakForm.addEventListener("submit", function(event) {
+        event.preventDefault();
     })
     .catch((error) => alert('Error: ' + error));
 });
@@ -132,10 +152,12 @@ document.getElementById("kontakForm").addEventListener("submit", function(event)
     })
     .then(response => response.json())
     .then(data => {
-        if (data.result === "success") {
-            alert('Pesan berhasil dikirim!');
-            document.getElementById("kontakForm").reset();  // Reset form setelah berhasil
-        } else {
+});
+
+var fasilitasForm = document.getElementById("fasilitasForm");
+if (fasilitasForm) {
+    fasilitasForm.addEventListener("submit", function(event) {
+        event.preventDefault();
             alert('Terjadi kesalahan: ' + data.message);
         }
     })
@@ -162,10 +184,12 @@ document.getElementById("fasilitasForm").addEventListener("submit", function(eve
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
     })
-    .then(response => response.json())
-    .then(data => {
-        if (data.result === "success") {
-            alert('Fasilitas berhasil disimpan!');
+});
+
+var dokumenForm = document.getElementById("dokumenForm");
+if (dokumenForm) {
+    dokumenForm.addEventListener("submit", function(event) {
+        event.preventDefault();
             document.getElementById("fasilitasForm").reset();  // Reset form setelah berhasil
         } else {
             alert('Terjadi kesalahan: ' + data.message);
@@ -194,10 +218,12 @@ document.getElementById("dokumenForm").addEventListener("submit", function(event
     fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
         method: 'POST',
         body: JSON.stringify(data),
-        headers: { 'Content-Type': 'application/json' }
-    })
-    .then(response => response.json())
-    .then(data => {
+});
+
+var arsipForm = document.getElementById("arsipForm");
+if (arsipForm) {
+    arsipForm.addEventListener("submit", function(event) {
+        event.preventDefault();
         if (data.result === "success") {
             alert('Dokumen berhasil disimpan!');
             document.getElementById("dokumenForm").reset();  // Reset form setelah berhasil
@@ -234,10 +260,12 @@ document.getElementById("arsipForm").addEventListener("submit", function(event) 
     };
 
     fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: { 'Content-Type': 'application/json' }
-    })
+});
+
+var domisiliForm = document.getElementById("domisiliForm");
+if (domisiliForm) {
+    domisiliForm.addEventListener("submit", function(event) {
+        event.preventDefault();
     .then(response => response.json())
     .then(data => {
         if (data.result === "success") {
@@ -276,10 +304,12 @@ document.getElementById("domisiliForm").addEventListener("submit", function(even
         alamatAsalPemohon: alamatAsalPemohon,
         alamatDomisili: alamatDomisili
     };
+});
 
-    fetch('https://script.google.com/macros/s/AKfycbw15oDIM7eLQvy5qxCTr6W8heKAxzCiG6S57b8YL5ky6oHAU4LFpBKwV6U3Eg-FGo-i/exec', {  // Ganti dengan URL Web App Google Apps Script Anda
-        method: 'POST',
-        body: JSON.stringify(data),
+var sktmForm = document.getElementById("sktmForm");
+if (sktmForm) {
+    sktmForm.addEventListener("submit", function(event) {
+        event.preventDefault();
         headers: { 'Content-Type': 'application/json' }
     })
     .then(response => response.json())
