@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumen - Pelayanan Desa</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Pelayanan Desa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dokumen.html">Dokumen</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Formulir Dokumen -->
+    <div class="container mt-5">
+        <h2>Formulir Pengelolaan Dokumen</h2>
+        <form id="dokumenForm">
+            <div class="form-group">
+                <label for="namaDokumen">Nama Dokumen</label>
+                <input type="text" class="form-control" id="namaDokumen" required>
+            </div>
+            <div class="form-group">
+                <label for="urlDokumen">URL Dokumen</label>
+                <input type="url" class="form-control" id="urlDokumen" required>
+            </div>
+            <div class="form-group">
+                <label for="uploadBy">Diupload Oleh</label>
+                <input type="text" class="form-control" id="uploadBy" required>
+            </div>
+            <div class="form-group">
+                <label for="ketuaRT">Ketua RT</label>
+                <input type="text" class="form-control" id="ketuaRT" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Simpan Dokumen</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.5/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

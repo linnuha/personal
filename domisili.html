@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domisili - Pelayanan Desa</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Pelayanan Desa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="domisili.html">Domisili</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Formulir Domisili -->
+    <div class="container mt-5">
+        <h2>Formulir Pengajuan Domisili</h2>
+        <form id="domisiliForm">
+            <div class="form-group">
+                <label for="nomorSurat">Nomor Surat Pemohon</label>
+                <input type="text" class="form-control" id="nomorSurat" required>
+            </div>
+            <div class="form-group">
+                <label for="ktpPemohon">No KTP Pemohon</label>
+                <input type="text" class="form-control" id="ktpPemohon" required>
+            </div>
+            <div class="form-group">
+                <label for="namaPemohon">Nama Pemohon</label>
+                <input type="text" class="form-control" id="namaPemohon" required>
+            </div>
+            <div class="form-group">
+                <label for="genderPemohon">Gender Pemohon</label>
+                <select class="form-control" id="genderPemohon" required>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tempatLahirPemohon">Tempat Lahir Pemohon</label>
+                <input type="text" class="form-control" id="tempatLahirPemohon" required>
+            </div>
+            <div class="form-group">
+                <label for="tanggalLahirPemohon">Tanggal Lahir Pemohon</label>
+                <input type="date" class="form-control" id="tanggalLahirPemohon" required>
+            </div>
+            <div class="form-group">
+                <label for="agamaPemohon">Agama Pemohon</label>
+                <input type="text" class="form-control" id="agamaPemohon" required>
+            </div>
+            <div class="form-group">
+                <label for="pekerjaanPemohon">Pekerjaan Pemohon</label>
+                <input type="text" class="form-control" id="pekerjaanPemohon" required>
+            </div>
+            <div class="form-group">
+                <label for="alamatAsalPemohon">Alamat Asal Pemohon</label>
+                <textarea class="form-control" id="alamatAsalPemohon" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="alamatDomisili">Alamat Domisili</label>
+                <textarea class="form-control" id="alamatDomisili" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Simpan Data Domisili</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.5/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
