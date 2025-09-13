@@ -1,90 +1,39 @@
-// Peta Google Maps
-function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 13,
-        center: { lat: -6.1750, lng: 106.8650 }, // Jakarta sebagai default
-    });
-
-    // Fungsi untuk menambahkan marker
-    var marker;
-    document.getElementById('desaForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Ambil koordinat
-        var coords = document.getElementById('desaCoordinates').value.split(',');
-        var lat = parseFloat(coords[0].trim());
-        var lng = parseFloat(coords[1].trim());
-
-        // Set marker di peta
-        marker = new google.maps.Marker({
-            position: { lat: lat, lng: lng },
-            map: map,
-        });
-
-        map.setCenter({ lat: lat, lng: lng }); // Pindahkan peta ke koordinat baru
-    });
-}
-
-// Menangani pengiriman data form
-document.getElementById('desaForm').addEventListener('submit', function(e) {
-    e.preventDefault();  // Mencegah refresh halaman
-
-    var desaName = document.getElementById('desaName').value;
-    var desaLocation = document.getElementById('desaLocation').value;
-    var desaPopulation = document.getElementById('desaPopulation').value;
-    var desaDescription = document.getElementById('desaDescription').value;
-    var desaCoordinates = document.getElementById('desaCoordinates').value;
-
-    var desaData = {
-        name: desaName,
-        location: desaLocation,
-        population: desaPopulation,
-        description: desaDescription,
-        coordinates: desaCoordinates
+// Fungsi untuk mengirim data ke Google Apps Script
+function submitData() {
+    var data = {
+        id: document.getElementById('id').value,
+        nama: document.getElementById('nama').value,
+        nik: document.getElementById('nik').value,
+        jenisKelamin: document.getElementById('jenisKelamin').value,
+        tempatLahir: document.getElementById('tempatLahir').value,
+        tanggalLahir: document.getElementById('tanggalLahir').value,
+        agama: document.getElementById('agama').value,
+        pekerjaan: document.getElementById('pekerjaan').value,
+        statusKawin: document.getElementById('statusKawin').value,
+        alamat: document.getElementById('alamat').value,
+        rt: document.getElementById('rt').value
     };
 
-    // Kirim data ke Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbze7seI0RAoLyCvlG8JxYJy-HFTR3vjpln2wGHszn0cEw5mRpsvvE5ErXVUz5AWOPDr/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbwQkSZf3NKx518tG5NzYpvSUT5MReOocdDPoHQ0pGW5Q2vhE6KkGG5tBnfsl-YLKRz4/exec', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(desaData),
+        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json' }
     })
     .then(response => response.json())
-    .then(data => {
-        alert('Data Desa berhasil disimpan!');
-        document.getElementById('desaForm').reset();
-        updateTable(desaData);  // Tambahkan data ke tabel
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Terjadi kesalahan saat menyimpan data.');
-    });
-});
-
-// Update Tabel Data
-function updateTable(data) {
-    var table = document.getElementById('desaTable').getElementsByTagName('tbody')[0];
-    var row = table.insertRow();
-    row.insertCell(0).textContent = data.name;
-    row.insertCell(1).textContent = data.location;
-    row.insertCell(2).textContent = data.population;
-    row.insertCell(3).textContent = data.description;
-    row.insertCell(4).textContent = data.coordinates;
+    .then(data => alert('Data berhasil disimpan!'))
+    .catch((error) => alert('Error: ' + error));
 }
 
-// Menangani login
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
+// Handle login
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
-    if (username === 'admin' && password === 'password123') {
-        alert('Login berhasil!');
-        document.getElementById('loginSection').classList.add('hidden');
-        document.getElementById('dataInputSection').classList.remove('hidden');
+    // Simple login validation (you can integrate with Google Sheets for validation)
+    if (username === "admin" && password === "admin123") {
+        window.location.href = "index.html";  // Redirect to homepage after login
     } else {
-        alert('Username atau password salah');
+        alert("Username atau password salah.");
     }
 });
