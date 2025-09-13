@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 password: password
             };
 
-            fetch('https://script.google.com/macros/s/AKfycbwIuuWuJo_Zp4JJayfsSy5wXjTYLNj-pzwJnx_NXUNeHDU37fYMV6zgK-k_fUd9oWnu/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbxr6h8VOhrewcj4HAVSGso-bXvy_gnUP7s_oE610_Nrly02_81LU8TyAgUk8oirk0SS/exec', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 rt: rt
             };
 
-            fetch('https://script.google.com/macros/s/AKfycbwIuuWuJo_Zp4JJayfsSy5wXjTYLNj-pzwJnx_NXUNeHDU37fYMV6zgK-k_fUd9oWnu/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbxr6h8VOhrewcj4HAVSGso-bXvy_gnUP7s_oE610_Nrly02_81LU8TyAgUk8oirk0SS/exec', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 isiPengaduan: isiPengaduan
             };
 
-            fetch('https://script.google.com/macros/s/AKfycbwIuuWuJo_Zp4JJayfsSy5wXjTYLNj-pzwJnx_NXUNeHDU37fYMV6zgK-k_fUd9oWnu/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbxr6h8VOhrewcj4HAVSGso-bXvy_gnUP7s_oE610_Nrly02_81LU8TyAgUk8oirk0SS/exec', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 pesan: pesan
             };
 
-            fetch('https://script.google.com/macros/s/AKfycbwIuuWuJo_Zp4JJayfsSy5wXjTYLNj-pzwJnx_NXUNeHDU37fYMV6zgK-k_fUd9oWnu/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbxr6h8VOhrewcj4HAVSGso-bXvy_gnUP7s_oE610_Nrly02_81LU8TyAgUk8oirk0SS/exec', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 gambar: gambar
             };
 
-            fetch('https://script.google.com/macros/s/AKfycbwIuuWuJo_Zp4JJayfsSy5wXjTYLNj-pzwJnx_NXUNeHDU37fYMV6zgK-k_fUd9oWnu/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbxr6h8VOhrewcj4HAVSGso-bXvy_gnUP7s_oE610_Nrly02_81LU8TyAgUk8oirk0SS/exec', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ketuaRT: ketuaRT
             };
 
-            fetch('https://script.google.com/macros/s/AKfycbwIuuWuJo_Zp4JJayfsSy5wXjTYLNj-pzwJnx_NXUNeHDU37fYMV6zgK-k_fUd9oWnu/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbxr6h8VOhrewcj4HAVSGso-bXvy_gnUP7s_oE610_Nrly02_81LU8TyAgUk8oirk0SS/exec', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 fileArsip: fileArsip
             };
 
-            fetch('https://script.google.com/macros/s/AKfycbwIuuWuJo_Zp4JJayfsSy5wXjTYLNj-pzwJnx_NXUNeHDU37fYMV6zgK-k_fUd9oWnu/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbxr6h8VOhrewcj4HAVSGso-bXvy_gnUP7s_oE610_Nrly02_81LU8TyAgUk8oirk0SS/exec', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
@@ -309,7 +309,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 alamatDomisili: alamatDomisili
             };
 
-            fetch('https://script.google.com/macros/s/AKfycbwIuuWuJo_Zp4JJayfsSy5wXjTYLNj-pzwJnx_NXUNeHDU37fYMV6zgK-k_fUd9oWnu/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbxr6h8VOhrewcj4HAVSGso-bXvy_gnUP7s_oE610_Nrly02_81LU8TyAgUk8oirk0SS/exec', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 keperluan: keperluan
             };
 
-            fetch('https://script.google.com/macros/s/AKfycbwIuuWuJo_Zp4JJayfsSy5wXjTYLNj-pzwJnx_NXUNeHDU37fYMV6zgK-k_fUd9oWnu/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbxr6h8VOhrewcj4HAVSGso-bXvy_gnUP7s_oE610_Nrly02_81LU8TyAgUk8oirk0SS/exec', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
